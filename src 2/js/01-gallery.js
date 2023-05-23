@@ -45,7 +45,3 @@ function onClickImage(evt) {
         }
     };
 };
-do {
-    
-    
-} while (condition);
