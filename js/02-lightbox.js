@@ -10,7 +10,7 @@ let galleryList = document.querySelector('.gallery');
 let galleryItem = galleryItems.map(({ preview, original, description }) => {
   return `<li class="gallery__item">
    <a class="gallery__link" href="${original}">
-      <img class=""gallery__image"" src="${preview}" alt="${description}" />
+      <img class="gallery__image" src="${preview}" alt="${description}" />
    </a>
 </li>`;
 });
@@ -18,15 +18,6 @@ let galleryItem = galleryItems.map(({ preview, original, description }) => {
 galleryList.insertAdjacentHTML('beforeend', galleryItem.join(''));
 console.log(galleryList);
 
-galleryList.addEventListener('click', onClickImage);
-
-function onClickImage(evt) {
-    evt.preventDefault();
-
-    if (evt.target.nodeName !== "IMG") {
-        return;
-    }
-}
 
 let lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
